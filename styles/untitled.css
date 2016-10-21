@@ -1,0 +1,32 @@
+html, body { font-family: -apple-system, 'Lucida Grande', sans-serif; }
+body { max-width: 1024px; margin: auto; outline: 1px solid pink; }
+
+img { max-width: 100%; height: auto; }
+ul {list-style: none; padding: 0; }
+ul > li { display: inline; }
+
+.flex-row {
+	display: -webkit-flex; display: flex;
+	flex-flow: row wrap; }
+
+header > .flex-row { justify-content: space-between; }
+
+main > .info { justify-content: space-around; }
+main > .links { justify-content: space-between; }
+
+.menu { justify-content: space-around; }
+.menu > .item { flex: 0 1 auto; }
+
+header > .flex-row, main > .flex-row,
+.menu-head.flex-row, footer > .flex-row
+{ padding-left: 1.5rem; padding-right: 1.5rem; }
+
+@media screen and (max-width: 512px) {
+	.menu > .item > p {
+		display: none;
+	}
+
+	.menu > .item > img {
+		width: calc(25vw - 4px);
+	}
+}
